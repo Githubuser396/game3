@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You ready?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #game {
+            margin: auto;
+            width: 300px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <h1>Let's go</h1>
+        <p id="clue"># I am a shoe brand {eg:nike (clue - 6 letters) } - ko 6th letter.<br><br>
+# In  clash royal what do we get after destroying tower? (Clue - 5 letters) - ko 4th letter.<br><br>
+# Dashain ma k udauxa convert to english (clue - 4 letters) - ko 2nd letter.<br><br>
+# I relief thirst, I am found in beach in trees, I have 3 eyes ( clue - 7 letters) - ko 7th letter.<br><br>
+# My brains dead, I’m thirst for human flesh, my single bite can make them one of us (clue - 6 letters) - ko 1st letter.<br><br>
+# Villain of batman (clue - 5 letters) - ko 4th letter.<br><br>
+# I fly in sky what am I ? (Clue - 4 letters) - ko 3rd letter.<br><br>
+# I am the fast running animal of the jungle (clue - 7 letters) - ko 1st letter.<br><br>
+# 4th month of english date (clue - 5th letters) - ko 1st letter.<br><br>
+# chang chung ching, which country ? (Clue - 5th letters) - ko 4th letter.<br><br>
+# what do we roll in Ludo ? (Clue - 4 letters) - ko 1st letter.</p>
+        <input type="text" id="guess" placeholder="Enter your ans here">
+        <button onclick="checkGuess()">Let's see</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        // Define the sentence to be guessed and the clue
+        const sentence = "switzerland";
+        
+        // Function to check the player's guess
+        function checkGuess() {
+            // Get the player's guess from the input field
+            const guess = document.getElementById('guess').value.trim().toLowerCase();
+            
+            // Get the result paragraph to display the result
+            const result = document.getElementById('result');
+            
+            // Check if the guess matches the predefined sentence
+            if (guess === sentence.toLowerCase()) {
+                result.textContent = "Congratulations!";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Incorrect";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
